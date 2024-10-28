@@ -1,5 +1,7 @@
 # 🎬 Movie Ticket Booking System
 
+[![wakatime](https://wakatime.com/badge/user/018c271e-45c3-428e-96ed-b810274da52c/project/dcb09b21-ed90-44e2-9f00-37614f58f058.svg)](https://wakatime.com/badge/user/018c271e-45c3-428e-96ed-b810274da52c/project/dcb09b21-ed90-44e2-9f00-37614f58f058)
+
 A Java-based **Movie Ticket Booking System** that allows users to view movies, select showtimes, reserve seats, and make payments. Admin users can manage movies, showtimes, and analyze revenue, providing a complete backend solution for a movie booking application.
 
 ## 📋 Table of Contents
