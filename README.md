@@ -26,6 +26,7 @@ The **Movie Ticket Booking System** is a Java console application demonstrating 
 
 ### User Features
 - **User Registration & Login**: Register as a new user or log in to an existing account.
+- **Security**: All users passwords are hashed when registered.
 - **Browse Movies**: View available movies along with details like title, genre, duration, and rating.
 - **Showtime & Seat Selection**: Choose a showtime and select available seats for booking.
 - **Payment Processing**: Multiple payment options (Credit Card, PayPal, Wallet) with dynamic pricing.
@@ -49,6 +50,7 @@ Movie-Ticket-Booking-System
 ├── Booking.java              # Handles booking details for seats and users
 ├── CreditCardPayment.java    # Implements credit card payment processing
 ├── LICENSE                   # License file
+├── HashUtils.java            # Utility class for hashing user passwords
 ├── Main.java                 # Main entry point of the application
 ├── Movie.java                # Represents a movie entity with attributes
 ├── MovieManager.java         # Manages operations related to movies

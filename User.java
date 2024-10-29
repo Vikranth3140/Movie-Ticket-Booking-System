@@ -9,7 +9,7 @@ public class User {
 
     public User(String username, String password, String role) {
         this.username = username;
-        this.password = password;
+        this.password = HashUtils.hashPassword(password); // Store hashed password
         this.role = role;
         this.bookingHistory = new ArrayList<>();
     }
@@ -23,7 +23,7 @@ public class User {
     }
 
     public boolean authenticate(String password) {
-        return this.password.equals(password);
+        return this.password.equals(HashUtils.hashPassword(password));
     }
 
     public void addBooking(Booking booking) {
