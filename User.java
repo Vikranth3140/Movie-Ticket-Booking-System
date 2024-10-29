@@ -9,7 +9,7 @@ public class User {
 
     public User(String username, String password, String role) {
         this.username = username;
-        this.password = password;
+        this.password = HashUtils.hashPassword(password); // Store hashed password
         this.role = role;
         this.bookingHistory = new ArrayList<>();
     }

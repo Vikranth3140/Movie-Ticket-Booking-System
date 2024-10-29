@@ -1,7 +1,7 @@
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
-public class Hash {
+public class HashUtils {
     /*
      * @params password: password to be hashed
      * 
