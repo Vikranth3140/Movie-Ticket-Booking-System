@@ -6,7 +6,7 @@ public class Hash {
      * @params password: password to be hashed
      * 
      * @return hashed password in sha256
-     */
+    */
     public static String hashPassword(String password) {
         try {
             MessageDigest messageDigest = MessageDigest.getInstance("SHA-256"); // Throws no such algorithim
