@@ -50,6 +50,7 @@ Movie-Ticket-Booking-System
 ├── Booking.java              # Handles booking details for seats and users
 ├── CreditCardPayment.java    # Implements credit card payment processing
 ├── LICENSE                   # License file
+├── HashUtils.java            # Utility class for hashing user passwords
 ├── Main.java                 # Main entry point of the application
 ├── Movie.java                # Represents a movie entity with attributes
 ├── MovieManager.java         # Manages operations related to movies
