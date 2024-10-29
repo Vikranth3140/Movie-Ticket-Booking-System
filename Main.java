@@ -68,8 +68,7 @@ public class Main {
     }
 
     // User-specific menu for booking actions
-    private static void userMenu(Scanner scanner, User user, MovieManager movieManager,
-            ShowtimeManager showtimeManager) {
+    private static void userMenu(Scanner scanner, User user, MovieManager movieManager, ShowtimeManager showtimeManager) {
         while (true) {
             System.out.println("\n--- User Menu ---");
             System.out.println("1. View Booking History");
@@ -142,8 +141,7 @@ public class Main {
                                 }
 
                                 // Ask user for seat selection
-                                System.out.print(
-                                        "Enter the seat numbers you want to book (comma-separated, e.g., 1,2): ");
+                                System.out.print("Enter the seat numbers you want to book (comma-separated, e.g., 1,2): ");
                                 String seatInput = scanner.nextLine();
                                 String[] seatNumbers = seatInput.split(",");
 
@@ -158,13 +156,9 @@ public class Main {
                                         if (seat != null) {
                                             seatsToBook.add(seat);
                                         } else {
-                                            System.out.println(
-                                                    "Seat " + seatNum + " is not available. Skipping this seat.");
-                                        }
+                                            System.out.println("Seat " + seatNum + " is not available. Skipping this seat.");
                                     } catch (NumberFormatException e) {
-                                        System.out.println(
-                                                "Invalid seat number: " + seatNumber + ". Skipping this seat.");
-                                    }
+                                        System.out.println("Invalid seat number: " + seatNumber + ". Skipping this seat.");
                                 }
 
                                 if (!seatsToBook.isEmpty()) {
