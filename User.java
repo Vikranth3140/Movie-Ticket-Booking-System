@@ -7,9 +7,9 @@ public class User {
     private String role; // New role attribute (e.g., "Admin" or "User")
     private List<Booking> bookingHistory;
 
-    public User (String username, String password, String role) {
+    public User(String username, String password, String role) {
         this.username = username;
-        this.password = Hash.hashPassword(password);
+        this.password = Hash.hashPassword(password); // Add hashed password
         this.role = role;
         this.bookingHistory = new ArrayList<>();
     }
@@ -23,7 +23,7 @@ public class User {
     }
 
     public boolean authenticate(String password) {
-        return this.password.equals(Hash.hashPassword(password));
+        return this.password.equals(Hash.hashPassword(password)); // Check with hashed password
     }
 
     public void addBooking(Booking booking) {

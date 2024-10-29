@@ -68,7 +68,8 @@ public class Main {
     }
 
     // User-specific menu for booking actions
-    private static void userMenu(Scanner scanner, User user, MovieManager movieManager, ShowtimeManager showtimeManager) {
+    private static void userMenu(Scanner scanner, User user, MovieManager movieManager,
+            ShowtimeManager showtimeManager) {
         while (true) {
             System.out.println("\n--- User Menu ---");
             System.out.println("1. View Booking History");
@@ -141,7 +142,8 @@ public class Main {
                                 }
 
                                 // Ask user for seat selection
-                                System.out.print("Enter the seat numbers you want to book (comma-separated, e.g., 1,2): ");
+                                System.out.print(
+                                        "Enter the seat numbers you want to book (comma-separated, e.g., 1,2): ");
                                 String seatInput = scanner.nextLine();
                                 String[] seatNumbers = seatInput.split(",");
 
@@ -156,16 +158,19 @@ public class Main {
                                         if (seat != null) {
                                             seatsToBook.add(seat);
                                         } else {
-                                            System.out.println("Seat " + seatNum + " is not available. Skipping this seat.");
+                                            System.out.println(
+                                                    "Seat " + seatNum + " is not available. Skipping this seat.");
                                         }
                                     } catch (NumberFormatException e) {
-                                        System.out.println("Invalid seat number: " + seatNumber + ". Skipping this seat.");
+                                        System.out.println(
+                                                "Invalid seat number: " + seatNumber + ". Skipping this seat.");
                                     }
                                 }
 
                                 if (!seatsToBook.isEmpty()) {
                                     double totalCost = selectedShowtime.getPrice() * seatsToBook.size();
-                                    System.out.println("Total cost: $" + totalCost); // Display the total cost to the user
+                                    System.out.println("Total cost: $" + totalCost); // Display the total cost to the
+                                                                                     // user
 
                                     // Use the total cost in the payment method selection
                                     Payment payment = selectPaymentMethod(scanner, user, totalCost);
@@ -211,7 +216,8 @@ public class Main {
     }
 
     // Admin-specific menu
-    private static void adminMenu(Scanner scanner, UserManager userManager, User admin, MovieManager movieManager, ShowtimeManager showtimeManager) {
+    private static void adminMenu(Scanner scanner, UserManager userManager, User admin, MovieManager movieManager,
+            ShowtimeManager showtimeManager) {
         AdminManager adminManager = new AdminManager(movieManager, showtimeManager);
 
         while (true) {
