@@ -23,7 +23,7 @@ public class User {
     }
 
     public boolean authenticate(String password) {
-        return this.password.equals(password);
+        return this.password.equals(HashUtils.hashPassword(password));
     }
 
     public void addBooking(Booking booking) {
